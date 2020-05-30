@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2F2uxtBRAOrcBhboj5HLyhNuiZyk+O/kLk+WDXtNlNQFrc/um8tqnQnnBYi9XFLunFrE38ZThCtMNi2Rp0Snkg==",
+  "dgSpecHash": "Mc2xr/ffIovXN1oJCgI5dl1wMLdR7rbVhTqUYBBcdPfz8hvMh3H1gx4fKVr7GuoEh3WI7L/C0Qm3S/i8IL6n/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\samet.turna\\Documents\\GitHub\\sameturna-article-web-api\\ArticleAPI\\ArticleAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\samet.turna\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\samet.turna\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\samet.turna\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\samet.turna\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.0-preview1.20021.1\\microsoft.data.sqlclient.2.0.0-preview1.20021.1.nupkg.sha512",
     "C:\\Users\\samet.turna\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.0-preview.4.20220.10\\microsoft.entityframeworkcore.5.0.0-preview.4.20220.10.nupkg.sha512",
