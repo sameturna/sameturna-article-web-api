@@ -4,11 +4,13 @@ using ArticleAPI.Data;
 using ArticleAPI.Dtos;
 using ArticleAPI.Models;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace ArticleAPI.Controllers
 {
+    [Authorize]
     [Route("api/articles")]
     [ApiController]
     public class ArticlesController : ControllerBase
