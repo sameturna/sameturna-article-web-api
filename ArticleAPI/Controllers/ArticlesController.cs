@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ArticleAPI.Data;
 using ArticleAPI.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,15 @@ namespace ArticleAPI.Controllers
 
         public ArticlesController(IArticleRepo repository)
         {
-            _repository = repository;
+            _repository = repository;        
+        }
+
+        [HttpGet]
+        public ActionResult <IEnumerable<Article>> GetAllArticles()
+        {
+            var articleItemList = _repository.GetAllArticles();
+
+            return Ok(articleItemList);            
         }
         
         [HttpGet("{id}")]
