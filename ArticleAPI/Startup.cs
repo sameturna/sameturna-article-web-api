@@ -34,6 +34,9 @@ namespace ArticleAPI
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<IArticleRepo, ArticleRepo>();
+
+            services.AddMvc();
+            services.AddMemoryCache();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

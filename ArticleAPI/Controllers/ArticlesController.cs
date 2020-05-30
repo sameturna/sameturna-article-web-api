@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using ArticleAPI.Data;
 using ArticleAPI.Dtos;
 using ArticleAPI.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace ArticleAPI.Controllers
 {
@@ -13,19 +15,34 @@ namespace ArticleAPI.Controllers
     {
         private readonly IArticleRepo _repository;
         private IMapper _mapper;
+        private readonly IMemoryCache _memoryCache;
 
-        public ArticlesController(IArticleRepo repository, IMapper mapper)
+        public ArticlesController(IArticleRepo repository, IMapper mapper, IMemoryCache memoryCache)
         {
             _repository = repository;    
             _mapper = mapper;    
+            _memoryCache = memoryCache;
         }
 
         [HttpGet]
         public ActionResult <IEnumerable<ArticleReadDto>> GetAllArticles()
         {
-            var articleItemList = _repository.GetAllArticles();
+            const string cacheKey = "articleListKey";
+            if (!_memoryCache.TryGetValue(cacheKey, out object articleReadDtoList))
+            {
+                var articleItemList = _repository.GetAllArticles();
+                articleReadDtoList = _mapper.Map<IEnumerable<ArticleReadDto>>(articleItemList);
 
-            return Ok(_mapper.Map<IEnumerable<ArticleReadDto>>(articleItemList));            
+                var cacheExpirationOptions =
+                new MemoryCacheEntryOptions
+                {
+                    AbsoluteExpiration = DateTime.Now.AddSeconds(20),
+                    Priority = CacheItemPriority.Normal
+                };
+                _memoryCache.Set(cacheKey, articleReadDtoList, cacheExpirationOptions);
+            }
+
+            return Ok(articleReadDtoList);            
         }
         
         [HttpGet("{id}", Name = "GetArticleById")]
