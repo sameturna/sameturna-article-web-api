@@ -5,6 +5,7 @@ namespace ArticleAPI.Data
 {
     public interface IArticleRepo
     {
+        bool SaveChanges();
         IEnumerable<Article> GetAllArticles();
         Article GetArticleById(int id);
         void CreateArticle(Article article);

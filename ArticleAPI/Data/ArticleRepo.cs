@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ArticleAPI.Models;
@@ -14,12 +15,19 @@ namespace ArticleAPI.Data
         }
         public void CreateArticle(Article article)
         {
-            throw new System.NotImplementedException();
+            if(article == null)
+            {
+                throw new ArgumentNullException(nameof(article));
+            }
+
+            article.IsDeleted = false;
+
+            _context.Articles.Add(article);
         }
 
         public void DeleteArticle(Article article)
         {
-            throw new System.NotImplementedException();
+             article.IsDeleted = true;
         }
 
         public IEnumerable<Article> GetAllArticles()
@@ -32,9 +40,14 @@ namespace ArticleAPI.Data
             return _context.Articles.FirstOrDefault(x => x.Id == id && x.IsDeleted == false);
         }
 
+        public bool SaveChanges()
+        {
+           return (_context.SaveChanges() >= 0 );
+        }
+
         public void UpdateArticle(Article article)
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

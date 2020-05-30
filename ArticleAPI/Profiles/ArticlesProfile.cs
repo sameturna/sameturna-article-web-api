@@ -9,6 +9,8 @@ namespace ArticleAPI.Profiles
         public ArticlesProfile()
         {
             CreateMap<Article, ArticleReadDto>();
+            CreateMap<ArticleCreateDto, Article>();
+            CreateMap<ArticleUpdateDto, Article>();
         }
     }
 }

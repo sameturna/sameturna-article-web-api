@@ -28,7 +28,7 @@ namespace ArticleAPI.Controllers
             return Ok(_mapper.Map<IEnumerable<ArticleReadDto>>(articleItemList));            
         }
         
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetArticleById")]
         public ActionResult <ArticleReadDto> GetArticleById(int id)
         {
             var articleItem = _repository.GetArticleById(id);
@@ -38,5 +38,50 @@ namespace ArticleAPI.Controllers
             }
             return NotFound();
         }
+
+        [HttpPost]
+        public ActionResult <ArticleReadDto> CreateArticle(ArticleCreateDto articleCreateDto)
+        {
+            var ArticleModel = _mapper.Map<Article>(articleCreateDto);
+            _repository.CreateArticle(ArticleModel);
+            _repository.SaveChanges();
+
+            var articleReadDto = _mapper.Map<ArticleReadDto>(ArticleModel);
+
+            return CreatedAtRoute(nameof(GetArticleById), new { Id = ArticleModel.Id }, articleReadDto);
+        }
+
+        [HttpPut("{id}")] 
+        public ActionResult UpdateArticle(int id, ArticleUpdateDto articleUpdateDto)
+        {
+            var articleModel = _repository.GetArticleById(id);
+            if(articleModel == null)
+            {
+                return NotFound();
+            }
+
+            _mapper.Map(articleUpdateDto, articleModel);
+
+            _repository.UpdateArticle(articleModel);
+            _repository.SaveChanges();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")] 
+        public ActionResult DeleteArticle(int id)
+        {
+            var articleModel = _repository.GetArticleById(id);
+            if(articleModel == null)
+            {
+                return NotFound();
+            }
+
+            _repository.DeleteArticle(articleModel);
+            _repository.SaveChanges();
+
+            return NoContent();
+        }
+
     }
 }
