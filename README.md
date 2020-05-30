@@ -25,4 +25,6 @@ Sorular:
 	-Veritabanı olarak mssql kullandım. Code First kullanarak tablomu oluşturdum, migration dosyalarını silmedim projenin içerisinde bakabilmeniz için. 
 	 Yine de dosya dizinine sql scriptini de yazarak ekledim. Şuan eklediğim veritabanı kendi sunucumda bulunduğu için zaten hiç veritabanı oluşturmadan da 
  	 projeyi ayağa kaldırabilirsiniz dilerseniz. Cuma akşamdan, cumartesi gecesine kadar vakit ayırabildim projeye bu kadarını yapabildim, umarım olmuştur. Teşekkürler.
+	-Projede Basic Authorization kullandım. username:john.smih@gmail.com  password:8b7dbd54861e461212b651213128ff5412 
+	 encode edilmiş hali: am9obi5zbWloQGdtYWlsLmNvbTo4YjdkYmQ1NDg2MWU0NjEyMTJiNjUxMjEzMTI4ZmY1NDEy
 
