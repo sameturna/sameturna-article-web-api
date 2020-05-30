@@ -61,3 +61,7 @@ C:\Users\samet.turna\Documents\GitHub\sameturna-article-web-api\ArticleAPI\obj\D
 C:\Users\samet.turna\Documents\GitHub\sameturna-article-web-api\ArticleAPI\obj\Debug\netcoreapp3.1\ArticleAPI.genruntimeconfig.cache
 C:\Users\samet.turna\Documents\GitHub\sameturna-article-web-api\ArticleAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\samet.turna\Documents\GitHub\sameturna-article-web-api\ArticleAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\samet.turna\Documents\GitHub\sameturna-article-web-api\ArticleAPI\bin\Debug\netcoreapp3.1\nlog.config
+C:\Users\samet.turna\Documents\GitHub\sameturna-article-web-api\ArticleAPI\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\samet.turna\Documents\GitHub\sameturna-article-web-api\ArticleAPI\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\samet.turna\Documents\GitHub\sameturna-article-web-api\ArticleAPI\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Mc2xr/ffIovXN1oJCgI5dl1wMLdR7rbVhTqUYBBcdPfz8hvMh3H1gx4fKVr7GuoEh3WI7L/C0Qm3S/i8IL6n/Q==",
+  "dgSpecHash": "BCM2Kz0vU1qpxxRDNCHT212+x5llflicQMZPhjfjb9ltZOS5j78aX9CmjIc7MKd2lx0YAJLNieUTWJKBNmpteg==",
   "success": true,
   "projectFilePath": "C:\\Users\\samet.turna\\Documents\\GitHub\\sameturna-article-web-api\\ArticleAPI\\ArticleAPI.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,9 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\samet.turna\\.nuget\\packages\\nlog\\4.6.8\\nlog.4.6.8.nupkg.sha512",
+    "C:\\Users\\samet.turna\\.nuget\\packages\\nlog.extensions.logging\\1.6.2\\nlog.extensions.logging.1.6.2.nupkg.sha512",
+    "C:\\Users\\samet.turna\\.nuget\\packages\\nlog.web.aspnetcore\\4.9.2\\nlog.web.aspnetcore.4.9.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
